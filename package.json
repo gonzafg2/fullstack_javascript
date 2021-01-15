@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev-app": "cd app && yarn dev",
+    "db": "docker-compose -f docker-mysql.yml up",
+    "dev": "yarn db & yarn dev-api & yarn dev-app",
     "dev-api": "cd api && yarn start",
-    "docker-stop": "docker container stop $(docker container ls -aq)",
-    "db": "docker-compose -f docker-mysql.yml up"
+    "dev-app": "cd app && yarn dev",
+    "docker-stop": "docker container stop $(docker container ls -aq)"
   }
 }
