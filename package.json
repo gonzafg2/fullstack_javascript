@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev-app": "cd app && quasar dev",
+    "dev-app": "cd app && yarn dev",
     "dev-api": "cd api && yarn start",
     "docker-stop": "docker container stop $(docker container ls -aq)",
     "db": "docker-compose -f docker-mysql.yml up"
