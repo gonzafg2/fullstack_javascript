@@ -28,6 +28,24 @@ export class Tester extends Entity {
   })
   apellido: string;
 
+  @property({
+    type: 'number',
+    required: true,
+    precision: 3,
+    scale: 0,
+    mysql: {columnName: 'edad', dataType: 'tinyint', dataLength: null, dataPrecision: 3, dataScale: 0, nullable: 'N'},
+  })
+  edad: number;
+
+  @property({
+    type: 'number',
+    required: true,
+    precision: 3,
+    scale: 0,
+    mysql: {columnName: 'Mascota', dataType: 'tinyint', dataLength: null, dataPrecision: 3, dataScale: 0, nullable: 'N'},
+  })
+  mascota: number;
+
   // Define well-known properties here
 
   // Indexer property to allow additional data

@@ -32,7 +32,6 @@ export default Vue.extend({
         const data = db.data;
         this.items = data;
         // console.log(data);
-        
       } catch (error) {
         console.log(error);
       }
