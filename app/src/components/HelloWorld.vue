@@ -26,12 +26,12 @@ export default Vue.extend({
   },
   methods: {
     async getData(): Promise<void> {
-      const url = "http://localhost:3001/testers";
+      const url = "http://localhost:3000/ugcc-usuario-encuestas";
       try {
         const db = await axios.get(url);
         const data = db.data;
         this.items = data;
-        // console.log(data);
+        console.log(data);
       } catch (error) {
         console.log(error);
       }

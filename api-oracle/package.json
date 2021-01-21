@@ -1,7 +1,7 @@
 {
-  "name": "api",
+  "name": "api-oracle",
   "version": "0.0.1",
-  "description": "api",
+  "description": "api-oracle",
   "keywords": [
     "loopback-application",
     "loopback"
@@ -14,21 +14,19 @@
   "scripts": {
     "build": "lb-tsc",
     "build:watch": "lb-tsc --watch",
-    "lint": "yarn run prettier:check",
-    "lint:fix": "yarn run prettier:fix",
+    "lint": "npm run prettier:check",
+    "lint:fix": "npm run prettier:fix",
     "prettier:cli": "lb-prettier \"**/*.ts\" \"**/*.js\"",
-    "prettier:check": "yarn run prettier:cli -l",
-    "prettier:fix": "yarn run prettier:cli --write",
-    "pretest": "yarn run rebuild",
-    "test": "lb-mocha --allow-console-logs \"dist/__tests__\"",
-    "posttest": "yarn run lint",
-    "test:dev": "lb-mocha --allow-console-logs dist/__tests__/**/*.js && yarn run posttest",
-    "premigrate": "yarn run build",
+    "prettier:check": "npm run prettier:cli -- -l",
+    "prettier:fix": "npm run prettier:cli -- --write",
+    "pretest": "npm run rebuild",
+    "posttest": "npm run lint",
+    "premigrate": "npm run build",
     "migrate": "node ./dist/migrate",
-    "preopenapi-spec": "yarn run build",
+    "preopenapi-spec": "npm run build",
     "openapi-spec": "node ./dist/openapi-spec",
-    "rebuild": "yarn run clean && yarn run build",
-    "prestart": "yarn run rebuild",
+    "rebuild": "npm run clean && npm run build",
+    "prestart": "npm run rebuild",
     "start": "node -r source-map-support/register .",
     "clean": "lb-clean dist *.tsbuildinfo .eslintcache"
   },
@@ -51,9 +49,8 @@
     "@loopback/rest": "^9.1.1",
     "@loopback/rest-explorer": "^3.0.5",
     "@loopback/service-proxy": "^3.0.5",
-    "loopback-connector-mysql": "^5.3.0",
-    "loopback-connector-oracle": "^4.1.0",
-    "oracledb": "^4.2.0",
+    "loopback-connector-oracle": "^4.5.0",
+    "oracledb": "^5.1.0",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
