@@ -6,6 +6,7 @@
     "db": "docker-compose -f docker-mysql.yml up",
     "dev": "yarn db & yarn dev-api & yarn dev-app",
     "dev-api": "cd api && yarn start",
+    "dev-api-oracle": "cd api-oracle && yarn start",
     "dev-app": "cd app && yarn dev",
     "docker-stop": "docker container stop $(docker container ls -aq)"
   }

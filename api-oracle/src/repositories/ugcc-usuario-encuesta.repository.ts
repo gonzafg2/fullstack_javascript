@@ -1,7 +1,7 @@
-import {DefaultCrudRepository} from '@loopback/repository';
-import {UgccUsuarioEncuesta, UgccUsuarioEncuestaRelations} from '../models';
-import {OracleDataSource} from '../datasources';
 import {inject} from '@loopback/core';
+import {DefaultCrudRepository} from '@loopback/repository';
+import {OracleDataSource} from '../datasources';
+import {UgccUsuarioEncuesta, UgccUsuarioEncuestaRelations} from '../models';
 
 export class UgccUsuarioEncuestaRepository extends DefaultCrudRepository<
   UgccUsuarioEncuesta,
